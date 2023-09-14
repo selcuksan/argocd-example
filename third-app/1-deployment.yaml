@@ -2,21 +2,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-world
+  name: nginx
   namespace: build
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: hello-world
+      app: nginx
   template:
     metadata:
       labels:
-        app: hello-world
+        app: nginx
     spec:
       containers:
-      - name: hello-world
-        image: hello-world
+      - name: nginx
+        image: nginx
         resources:
           limits:
             memory: "128Mi"
