@@ -2,21 +2,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: busybox
+  name: hello-world
   namespace: build
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: busybox
+      app: hello-world
   template:
     metadata:
       labels:
-        app: busybox
+        app: hello-world
     spec:
       containers:
-      - name: busybox
-        image: busybox
+      - name: hello-world
+        image: hello-world
         resources:
           limits:
             memory: "128Mi"
