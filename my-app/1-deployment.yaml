@@ -5,6 +5,7 @@ metadata:
   name: nginx
   namespace: prod
 spec:
+  replicas: 3
   selector:
     matchLabels:
       app: nginx
@@ -13,7 +14,6 @@ spec:
       labels:
         app: nginx
     spec:
-      replicas: 3
       containers:
       - name: nginx
         image: selcuksan/nginx:v0.1.0
