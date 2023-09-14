@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -14,7 +15,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: selcuksan/nginx:tagname
+        image: selcuksan/nginx:v0.1.0
         resources:
           limits:
             memory: "128Mi"
