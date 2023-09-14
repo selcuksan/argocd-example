@@ -2,21 +2,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx
-  namespace: prod
+  name: redis
+  namespace: test
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: nginx
+      app: redis
   template:
     metadata:
       labels:
-        app: nginx
+        app: redis
     spec:
       containers:
-      - name: nginx
-        image: selcuksan/nginx:v0.1.2
+      - name: redis
+        image: redis
         resources:
           limits:
             memory: "128Mi"
