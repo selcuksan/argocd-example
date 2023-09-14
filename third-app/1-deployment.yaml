@@ -2,21 +2,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx
+  name: selcuksan/myapp
   namespace: build
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: nginx
+      app: selcuksan/myapp
   template:
     metadata:
       labels:
-        app: nginx
+        app: selcuksan/myapp
     spec:
       containers:
-      - name: nginx
-        image: nginx
+      - name: selcuksan/myapp
+        image: selcuksan/myapp
         resources:
           limits:
             memory: "128Mi"

@@ -2,21 +2,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: redis
+  name: selcuksan/flask-redis-app
   namespace: test
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: redis
+      app: selcuksan/flask-redis-app
   template:
     metadata:
       labels:
-        app: redis
+        app: selcuksan/flask-redis-app
     spec:
       containers:
-      - name: redis
-        image: redis
+      - name: selcuksan/flask-redis-app
+        image: selcuksan/flask-redis-app
         resources:
           limits:
             memory: "128Mi"
