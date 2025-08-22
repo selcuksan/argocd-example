@@ -2,20 +2,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: selcuksan/flask-redis-app
+  name: selcuksan_flask-redis-app
   namespace: argocd
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: selcuksan/flask-redis-app
+      app: selcuksan_flask-redis-app
   template:
     metadata:
       labels:
-        app: selcuksan/flask-redis-app
+        app: selcuksan_flask-redis-app
     spec:
       containers:
-      - name: selcuksan/flask-redis-app
+      - name: selcuksan_flask-redis-app
         image: selcuksan/flask-redis-app
         resources:
           limits:
