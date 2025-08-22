@@ -5,7 +5,7 @@ metadata:
   name: selcuksan-flask-redis-app
   namespace: argocd
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: selcuksan-flask-redis-app
