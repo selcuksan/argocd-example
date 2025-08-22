@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: selcuksan/flask-redis-app
-  namespace: test
+  namespace: argocd
 spec:
   replicas: 3
   selector:
