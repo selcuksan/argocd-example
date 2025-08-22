@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: selcuksan-flask-redis-app
-        image: selcuksan/flask-redis-app
+        image: selcuksan/flask-redis-app:v2
         resources:
           limits:
             memory: "128Mi"
